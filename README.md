@@ -1,2 +1,2 @@
 # JEDI-FLIPFIT-DEVELOPMENT-PROJECT
-# GMS
+# Gym Management System
