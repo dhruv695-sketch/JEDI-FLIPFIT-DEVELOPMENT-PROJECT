@@ -2,6 +2,9 @@ package com.flipkart.bean;
 
 import java.util.Date;
 
+/**
+ * 
+ */
 public class Payment {
     private int paymentId;
     private int transactionId;

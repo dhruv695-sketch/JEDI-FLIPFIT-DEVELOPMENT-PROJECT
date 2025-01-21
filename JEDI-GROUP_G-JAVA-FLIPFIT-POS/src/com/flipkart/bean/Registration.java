@@ -1,5 +1,8 @@
 package com.flipkart.bean;
 
+/**
+ * 
+ */
 public class Registration {
     private boolean registrationStatus;
     private String registrationDetails;

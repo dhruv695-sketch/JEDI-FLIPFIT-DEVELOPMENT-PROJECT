@@ -1,11 +1,17 @@
 package com.flipkart.bean;
 
+/**
+ * 
+ */
 public class User {
 	private String userId;
     private String name;
     private String emailId;
     private String password;
     
+    public User(String name) {
+    	this.name = name;
+    }
     public User(String name,  String emailId, String password) {
     	this.name = name;
     	this.emailId = emailId;

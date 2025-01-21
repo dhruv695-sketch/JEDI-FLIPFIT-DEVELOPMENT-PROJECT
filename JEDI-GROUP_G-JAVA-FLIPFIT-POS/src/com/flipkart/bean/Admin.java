@@ -2,8 +2,17 @@ package com.flipkart.bean;
 
 import java.util.List;
 
+/**
+ * 
+ */
 public class Admin extends User {
-    private List<GymOwner> pendingGymOwnerVerification;
+	
+    public Admin(String name, String emailId, String password) {
+		super(name, emailId, password);
+		// TODO Auto-generated constructor stub
+	}
+
+	private List<GymOwner> pendingGymOwnerVerification;
     private List<Gym> pendingGymVerification;
 
     // Getters and Setters

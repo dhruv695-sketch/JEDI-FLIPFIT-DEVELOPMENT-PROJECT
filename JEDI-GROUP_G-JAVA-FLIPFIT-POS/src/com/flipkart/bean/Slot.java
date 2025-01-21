@@ -2,6 +2,9 @@ package com.flipkart.bean;
 
 import java.util.List;
 
+/**
+ * 
+ */
 public class Slot {
     private int slotId;
     private String startTime;

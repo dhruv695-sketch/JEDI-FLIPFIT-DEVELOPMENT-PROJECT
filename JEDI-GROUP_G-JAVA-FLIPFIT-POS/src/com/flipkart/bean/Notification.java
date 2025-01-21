@@ -1,7 +1,11 @@
 package com.flipkart.bean;
+
 import java.util.List;
 import java.time.LocalDateTime;
 
+/**
+ * 
+ */
 public class Notification {
     private int notificationId;
     private String type;

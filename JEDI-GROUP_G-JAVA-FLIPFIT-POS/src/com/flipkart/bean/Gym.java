@@ -1,11 +1,19 @@
 package com.flipkart.bean;
+
 import java.util.List;
 
+/**
+ * 
+ */
 public class Gym {
 	 private int gymId;
 	    private String name;
 	    private String location;
 	    private List<Slot> slotList;
+	    
+	    public Gym(String name) {
+	    	this.name = name;
+	    }
 
 	    // Getters and Setters
 	    public int getGymId() {
