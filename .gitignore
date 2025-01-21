@@ -1,4 +1,10 @@
 .project
 .metadata
+.settings
 .metadata/*
 .DS_Store
+**/.DS_Store
+**/.project
+**/.metadata
+**/.settings
+
