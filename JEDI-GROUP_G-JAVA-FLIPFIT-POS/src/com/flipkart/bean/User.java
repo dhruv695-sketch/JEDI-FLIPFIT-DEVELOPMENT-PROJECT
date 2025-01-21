@@ -5,6 +5,12 @@ public class User {
     private String name;
     private String emailId;
     private String password;
+    
+    public User(String name,  String emailId, String password) {
+    	this.name = name;
+    	this.emailId = emailId;
+    	this.password = password;
+    }
 
     // Getters and Setters
     public String getUserId() {
@@ -38,4 +44,6 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+    
+    
 }
