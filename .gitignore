@@ -3,6 +3,7 @@
 .settings
 .metadata/*
 .DS_Store
+.idea/
 **/.DS_Store
 **/.project
 **/.metadata
