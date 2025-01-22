@@ -21,13 +21,13 @@ public class UserService {
     }
 
     // Method to retrieve all customers
-    public List<FlipFitCustomer> getAllCustomers() {
+    public List<Customer> getAllCustomers() {
         // Logic to fetch all customers
         return null; // Placeholder
     }
 
     // Method to retrieve all admins
-    public List<FlipFitAdmin> getAllAdmins() {
+    public List<Admin> getAllAdmins() {
         // Logic to fetch all admins
         return null; // Placeholder
     }
