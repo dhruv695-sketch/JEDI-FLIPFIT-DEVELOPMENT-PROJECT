@@ -4,5 +4,5 @@
 /**
  * 
  */
-module JEDI_Group_G_FlipFit_POS {
+module JEDI_FGroup_G_FlipFit_POS {
 }

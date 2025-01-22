@@ -2,6 +2,8 @@ package com.flipkart.bean;
 
 public class Role {
 	private int id;
+	private String roleName;
+	
 	/**
 	 * @return the id
 	 */
@@ -26,6 +28,5 @@ public class Role {
 	public void setRoleName(String roleName) {
 		this.roleName = roleName;
 	}
-	private String roleName;
 	
 }

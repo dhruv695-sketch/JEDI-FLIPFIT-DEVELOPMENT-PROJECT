@@ -23,11 +23,15 @@ public class GymAdminService {
     // Method to retrieve pending verifications
     public List<GymCentre> getPendingGymVerifications() {
         // Logic to fetch pending verifications
+        System.out.println("Pending gym verifications :  " );
+
         return null; // Placeholder
     }
     
     public List<GymOwner> getPendingGymOwnerVerifications() {
         // Logic to fetch pending verifications
+        System.out.println("Pending gym owner verifications :  ");
+
         return null; // Placeholder
     }
     
