@@ -2,33 +2,28 @@ package com.flipkart.business;
 
 import com.flipkart.bean.GymCentre;
 import com.flipkart.bean.Slot;
+import com.flipkart.dao.GymOwnerDao;
+
 import java.util.List;
 
 public class GymOwnerService {
-    // Method to add a new gym
+	
+	GymOwnerDao gymOwnerDao = new GymOwnerDao();
+	
     public boolean addGym(GymCentre gymCentre) {
-        // Logic to add a gym
-        System.out.println("Gym added: " + gymCentre.getName());
-        return true; // Placeholder
+    	return gymOwnerDao.addGym(gymCentre);
     }
 
-    // Method to update gym details
     public boolean updateGym(GymCentre gymCentre) {
-        // Logic to update gym details
-        System.out.println("Gym updated: " + gymCentre.getName());
-        return true; // Placeholder
+    	return gymOwnerDao.updateGym(gymCentre);
     }
 
-    // Method to add a new slot to a gym
     public boolean addSlotToGym(int gymId, Slot slot) {
-        // Logic to add slot
-        System.out.println("Slot added to gym ID: " + gymId);
-        return true; // Placeholder
+        return gymOwnerDao.addSlotToGym(gymId, slot);
     }
 
-    // Method to retrieve all gyms for an owner
     public List<GymCentre> getGymsForOwner(int ownerId) {
-        // Logic to fetch gyms
-        return null; // Placeholder
+        return gymOwnerDao.getGymsForOwner(ownerId);
     }
+    
 }

@@ -3,46 +3,39 @@ package com.flipkart.business;
 import com.flipkart.bean.BookSlot;
 import com.flipkart.bean.GymCentre;
 import com.flipkart.bean.Slot;
+import com.flipkart.dao.CustomerDao;
 
 import java.util.List;
 
 public class CustomerService {
+	CustomerDao customerDao = new CustomerDao();
+	
     // Method to create a new booking
     public boolean createBooking(BookSlot bookSlot) {
-        // Logic to create a booking
-        System.out.println("Booking created for user ID: " + bookSlot.getUserId());
-        return true; // Placeholder
+        return customerDao.createBooking(bookSlot);
     }
 
     // Method to view all bookings for a customer
     public List<BookSlot> getBookingsForCustomer(int customerId) {
-        // Logic to retrieve bookings
-        return null; // Placeholder
+        return customerDao.getBookingsForCustomer(customerId); // Placeholder
     }
 
     // Method to cancel a booking
     public boolean cancelBooking(int bookingId) {
-        // Logic to cancel a booking
-        System.out.println("Booking canceled: " + bookingId);
-        return true; // Placeholder
+        return customerDao.cancelBooking(bookingId);
     }
     
     public List<GymCentre> searchGymsByLocation(String location) {
-        // Logic to search gyms
-        System.out.println("Searching gyms in location: " + location);
-        return null; // Placeholder
+        return customerDao.searchGymsByLocation(location);
     }
 
     // Method to retrieve all gyms
     public List<GymCentre> getAllGyms() {
-        // Logic to fetch all gyms
-        return null; // Placeholder
+        return customerDao.getAllGyms();
     }
     
     public boolean isSlotAvailable(int slotId) {
-        // Logic to check availability
-        System.out.println("Checking availability for slot ID: " + slotId);
-        return true; // Placeholder
+        return customerDao.isSlotAvailable(slotId);
     }
 
     // Method to update slot details
