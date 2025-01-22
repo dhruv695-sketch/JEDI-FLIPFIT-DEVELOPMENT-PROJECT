@@ -27,6 +27,7 @@ public class MainClient {
                 case 3 -> adminClient.adminMenu();
                 case 4 -> {
                     System.out.println("Exiting system. Goodbye!");
+                    scanner.close();
                     System.exit(0);
                 }
                 default -> System.out.println("Invalid choice.");
