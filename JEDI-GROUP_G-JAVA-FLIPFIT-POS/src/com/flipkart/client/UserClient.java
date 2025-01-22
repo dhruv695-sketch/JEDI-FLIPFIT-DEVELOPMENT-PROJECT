@@ -1,14 +1,14 @@
 package com.flipkart.client;
 
 import com.flipkart.bean.User;
-import com.flipkart.business.UserService;
+import com.flipkart.business.UserAuthService;
 import java.util.Scanner;
 
 /**
  * 
  */
 public class UserClient {
-    private UserService userService = new UserService();
+    private UserAuthService userAuthService = new UserAuthService();
 
     public void userMenu() {
         Scanner scanner = new Scanner(System.in);
@@ -34,7 +34,7 @@ public class UserClient {
         System.out.print("Password: ");
         String password = scanner.next();
         User user = new User(name, email, password);
-        if (userService.registerUser(user)) {
+        if (userAuthService.registerUser(user)) {
             System.out.println("Registration successful!");
         } else {
             System.out.println("Registration failed. Try again.");
@@ -47,7 +47,7 @@ public class UserClient {
         String email = scanner.next();
         System.out.print("Password: ");
         String password = scanner.next();
-        if (userService.validateLogin(email, password)) {
+        if (userAuthService.validateLogin(email, password)) {
             System.out.println("Login successful!");
         } else {
             System.out.println("Invalid credentials. Try again.");

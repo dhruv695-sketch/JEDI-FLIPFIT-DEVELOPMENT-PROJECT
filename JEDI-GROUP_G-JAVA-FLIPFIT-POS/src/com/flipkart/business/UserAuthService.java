@@ -2,10 +2,10 @@ package com.flipkart.business;
 
 import com.flipkart.bean.User;
 import com.flipkart.bean.Customer;
-import com.flipkart.bean.Admin;
+import com.flipkart.bean.GymAdmin;
 import java.util.List;
 
-public class UserService {
+public class UserAuthService {
     // Method to register a new user
     public boolean registerUser(User user) {
         // Logic to register a user
@@ -20,15 +20,11 @@ public class UserService {
         return true; // Placeholder
     }
 
-    // Method to retrieve all customers
-    public List<Customer> getAllCustomers() {
-        // Logic to fetch all customers
-        return null; // Placeholder
-    }
+   
 
-    // Method to retrieve all admins
-    public List<Admin> getAllAdmins() {
-        // Logic to fetch all admins
-        return null; // Placeholder
-    }
+//    // Method to retrieve all admins
+//    public List<GymAdmin> getAllAdmins() {
+//        // Logic to fetch all admins
+//        return null; // Placeholder
+//    }
 }

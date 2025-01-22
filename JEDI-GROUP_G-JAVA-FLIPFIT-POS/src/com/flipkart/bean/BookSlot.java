@@ -3,7 +3,7 @@ package com.flipkart.bean;
 /**
  * 
  */
-public class Booking {
+public class BookSlot {
     private int bookingId;
     private int userId;
     private int gymId;

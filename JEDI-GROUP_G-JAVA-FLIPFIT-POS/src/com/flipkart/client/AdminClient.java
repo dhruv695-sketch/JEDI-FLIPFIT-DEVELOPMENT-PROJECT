@@ -4,15 +4,15 @@
 package com.flipkart.client;
 
 import com.flipkart.bean.GymOwner;
-import com.flipkart.bean.Gym;
-import com.flipkart.business.AdminService;
+import com.flipkart.bean.GymCentre;
+import com.flipkart.business.GymAdminService;
 import java.util.Scanner;
 
 /**
  * 
  */
 public class AdminClient {
-    private AdminService adminService = new AdminService();
+    private GymAdminService gymAdminService = new GymAdminService();
 
     public void adminMenu() {
         Scanner scanner = new Scanner(System.in);
@@ -35,7 +35,7 @@ public class AdminClient {
         System.out.print("Enter Gym Owner Name: ");
         String name = scanner.next();
         GymOwner owner = new GymOwner(name);
-        if (adminService.verifyGymOwner(owner)) {
+        if (gymAdminService.verifyGymOwner(owner)) {
             System.out.println("Gym owner verified successfully!");
         } else {
             System.out.println("Failed to verify gym owner.");
@@ -45,8 +45,8 @@ public class AdminClient {
     private void verifyGym(Scanner scanner) {
         System.out.print("Enter Gym Name: ");
         String name = scanner.next();
-        Gym gym = new Gym(name);
-        if (adminService.verifyGym(gym)) {
+        GymCentre gymCentre = new GymCentre(name);
+        if (gymAdminService.verifyGym(gymCentre)) {
             System.out.println("Gym verified successfully!");
         } else {
             System.out.println("Failed to verify gym.");
@@ -55,7 +55,7 @@ public class AdminClient {
 
     private void viewPendingGyms() {
         System.out.println("Fetching pending gym verifications...");
-        var pendingGyms = adminService.getPendingGymVerifications();
+        var pendingGyms = gymAdminService.getPendingGymVerifications();
         if (pendingGyms != null) {
             pendingGyms.forEach(System.out::println);
         } else {

@@ -16,14 +16,14 @@ public class GymOwner extends User{
 		// TODO Auto-generated constructor stub
 	}
 
-	private List<Gym> gymList;
+	private List<GymCentre> gymList;
 
     // Getters and Setters
-    public List<Gym> getGymList() {
+    public List<GymCentre> getGymList() {
         return gymList;
     }
 
-    public void setGymList(List<Gym> gymList) {
+    public void setGymList(List<GymCentre> gymList) {
         this.gymList = gymList;
     }
 }

@@ -5,13 +5,13 @@ import java.util.List;
 /**
  * 
  */
-public class Gym {
+public class GymCentre {
 	 private int gymId;
 	    private String name;
 	    private String location;
 	    private List<Slot> slotList;
 	    
-	    public Gym(String name) {
+	    public GymCentre(String name) {
 	    	this.name = name;
 	    }
 

@@ -5,15 +5,15 @@ import java.util.List;
 /**
  * 
  */
-public class Admin extends User {
+public class GymAdmin extends User {
 	
-    public Admin(String name, String emailId, String password) {
+    public GymAdmin(String name, String emailId, String password) {
 		super(name, emailId, password);
 		// TODO Auto-generated constructor stub
 	}
 
 	private List<GymOwner> pendingGymOwnerVerification;
-    private List<Gym> pendingGymVerification;
+    private List<GymCentre> pendingGymVerification;
 
     // Getters and Setters
     public List<GymOwner> getPendingGymOwnerVerification() {
@@ -24,11 +24,11 @@ public class Admin extends User {
         this.pendingGymOwnerVerification = pendingGymOwnerVerification;
     }
 
-    public List<Gym> getPendingGymVerification() {
+    public List<GymCentre> getPendingGymVerification() {
         return pendingGymVerification;
     }
 
-    public void setPendingGymVerification(List<Gym> pendingGymVerification) {
+    public void setPendingGymVerification(List<GymCentre> pendingGymVerification) {
         this.pendingGymVerification = pendingGymVerification;
     }
 }

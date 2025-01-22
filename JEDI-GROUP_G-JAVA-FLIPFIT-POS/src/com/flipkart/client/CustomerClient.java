@@ -1,6 +1,6 @@
 package com.flipkart.client;
 
-import com.flipkart.bean.Booking;
+import com.flipkart.bean.BookSlot;
 import com.flipkart.business.CustomerService;
 import java.util.Scanner;
 
@@ -35,11 +35,11 @@ public class CustomerClient {
         int gymId = scanner.nextInt();
         System.out.print("Slot ID: ");
         int slotId = scanner.nextInt();
-        Booking booking = new Booking();
-        booking.setUserId(userId);
-        booking.setGymId(gymId);
-        booking.setSlotId(slotId);
-        if (customerService.createBooking(booking)) {
+        BookSlot bookSlot = new BookSlot();
+        bookSlot.setUserId(userId);
+        bookSlot.setGymId(gymId);
+        bookSlot.setSlotId(slotId);
+        if (customerService.createBooking(bookSlot)) {
             System.out.println("Booking created successfully!");
         } else {
             System.out.println("Failed to create booking.");
