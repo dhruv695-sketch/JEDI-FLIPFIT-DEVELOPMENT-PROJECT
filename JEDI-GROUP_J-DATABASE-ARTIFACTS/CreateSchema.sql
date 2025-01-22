@@ -35,6 +35,13 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
+INSERT INTO `FlipFit_Schema`.`Customer` (`CustomerId`, `CustomerName`, `CustomerAddress`, `CustomerEmailId`, `CustomerPassword`) VALUES
+(1, 'poojitha', 'grand continent', 'yakkala.l@flipkart.com', 'password123'),
+(2, 'dhruv', 'icon premier', 'dhruv.mehta1@flipkart.com', 'password456'),
+(3, 'pulkit', 'icon premier', 'pulkit.sharma2@flipkart.com', 'password789'),
+(4, 'vamsi', 'icon premier', 'vamsi.k@flipkart.com', 'password147'),
+(5, 'saransh', 'icon premier', 'saransh.kasliwal@flipkart.com', 'password258');
+
 
 -- -----------------------------------------------------
 -- Table `FlipFit_Schema`.`Slot`
@@ -49,6 +56,13 @@ CREATE TABLE IF NOT EXISTS `FlipFit_Schema`.`Slot` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
+INSERT INTO `FlipFit_Schema`.`Slot` (`SlotId`, `SlotDateTime`, `SlotSeats`, `SlotSeatsLeft`) VALUES
+(100, '2025-02-01 06:00:00', 20, 17),
+(101, '2025-02-01 07:00:00', 20, 18),
+(102, '2025-02-01 08:00:00', 20, 20),
+(103, '2025-02-02 06:00:00', 20, 20),
+(104, '2025-02-01 07:00:00', 20, 20);
+
 
 
 -- -----------------------------------------------------
@@ -71,6 +85,13 @@ CREATE TABLE IF NOT EXISTS `FlipFit_Schema`.`Booking` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
+INSERT INTO `FlipFit_Schema`.`Booking` (`BookingId`, `CustomerId`, `SlotId`, `BookingStatus`) VALUES
+(1000, 1, 100, 'Confirmed'),
+(1001, 2, 100, 'Confirmed'),
+(1002, 3, 100, 'Confirmed'),
+(1001, 4, 101, 'Confirmed'),
+(1002, 5, 101, 'Confirmed');
+
 
 
 -- -----------------------------------------------------
@@ -85,6 +106,13 @@ CREATE TABLE IF NOT EXISTS `FlipFit_Schema`.`Gym` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
+INSERT INTO `FlipFit_Schema`.`Gym` (`GymId`, `GymName`, `GymLocation`) VALUES
+(10001, 'FlipFit_Belandur_1', 'Belandur'),
+(10002, 'FlipFit_Belandur_2', 'Belandur'),
+(10003, 'FlipFit_Belandur_3', 'Belandur'),
+(10004, 'FlipFit_Belandur_4', 'Belandur'),
+(10005, 'FlipFit_Belandur_5', 'Belandur');
+
 
 
 -- -----------------------------------------------------
@@ -101,6 +129,10 @@ CREATE TABLE IF NOT EXISTS `FlipFit_Schema`.`GymAdmin` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
+INSERT INTO `FlipFit_Schema`.`GymAdmin` (`GymAdminId`, `GymAdminName`, `GymAdminEmailId`, `GymAdminPassword`) VALUES
+(10, 'Raj', 'raj.patel@flipkart.com', 'admin123'),
+(11, 'Ananya', 'ananya.jain2@flipkart.com', 'admin456');
+
 
 
 -- -----------------------------------------------------
@@ -117,6 +149,8 @@ CREATE TABLE IF NOT EXISTS `FlipFit_Schema`.`GymOwner` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
+INSERT INTO `FlipFit_Schema`.`GymOwner` (`GymOwnerID`, `GymOwnerName`, `GymOwnerEmailID`, `GymOwnerPassword`) VALUES
+(110, 'Aditya', 'aditya.aggarwal@flipkart.com', 'owner123');
 
 
 -- -----------------------------------------------------
@@ -140,6 +174,12 @@ CREATE TABLE IF NOT EXISTS `FlipFit_Schema`.`GymList` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
+INSERT INTO `FlipFit_Schema`.`GymList` (`GymOwnerId`, `GymId`) VALUES
+(110, 10001),
+(110, 10002),
+(110, 10003),
+(110, 10004),
+(110, 10005);
 
 
 -- -----------------------------------------------------
@@ -160,6 +200,13 @@ CREATE TABLE IF NOT EXISTS `FlipFit_Schema`.`Payment` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
+INSERT INTO `FlipFit_Schema`.`Payment` (`PaymentId`, `TransactionId`, `Amount`, `PaymentDateTime`, `CustomerId`) VALUES
+(200, 300, 50, '2025-02-01 09:00:00', 1),
+(201, 301, 75, '2025-02-02 11:00:00', 2),
+(202, 302, 50, '2025-02-01 09:00:00', 3),
+(203, 303, 75, '2025-02-02 11:00:00', 4),
+(204, 304, 100, '2025-02-03 13:00:00',5);
+
 
 
 -- -----------------------------------------------------
@@ -183,6 +230,14 @@ CREATE TABLE IF NOT EXISTS `FlipFit_Schema`.`SlotList` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
+INSERT INTO `FlipFit_Schema`.`SlotList` (`SlotId`, `GymId`) VALUES
+(100,10001),
+(101,10001),
+(102,10001),
+(103,10002),
+(104,10002);
+
+
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
