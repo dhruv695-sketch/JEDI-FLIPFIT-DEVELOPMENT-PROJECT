@@ -47,9 +47,9 @@ public class UserClient {
 
     private void loginUser(Scanner scanner) {
         System.out.println("Enter your login details:");
-        System.out.print("Enter the UserName: ");
-        String name = scanner.next();
-        
+//        System.out.print("Enter the UserName: ");
+//        String name = scanner.next();
+//        
         System.out.print("Enter your Email ID: ");
         String email = scanner.next();
         System.out.print("Password: ");
