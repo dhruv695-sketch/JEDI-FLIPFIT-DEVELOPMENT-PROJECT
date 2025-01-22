@@ -12,7 +12,7 @@ public class UserClient {
 
     public void userMenu() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Welcome to FlipFit");
+        System.out.println("Welcome to FlipFit Application");
         System.out.println("1. Register");
         System.out.println("2. Login");
         System.out.print("Enter your choice: ");
