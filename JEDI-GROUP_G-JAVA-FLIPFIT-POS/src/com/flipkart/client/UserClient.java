@@ -13,8 +13,11 @@ public class UserClient {
     public void userMenu() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to FlipFit Application");
-        System.out.println("1. Register");
-        System.out.println("2. Login");
+        System.out.println("1. Login");
+        System.out.println("2. Registration of the GymCustomer");
+        System.out.println("3. Registration of the GymOwner");
+        System.out.println("4. Change Password");
+        System.out.println("5. Exit");
         System.out.print("Enter your choice: ");
         int choice = scanner.nextInt();
 
