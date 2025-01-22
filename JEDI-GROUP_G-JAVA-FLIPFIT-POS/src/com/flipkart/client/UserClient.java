@@ -22,8 +22,9 @@ public class UserClient {
         int choice = scanner.nextInt();
 
         switch (choice) {
-            case 1 -> registerUser(scanner);
-            case 2 -> loginUser(scanner);
+        	case 1 -> loginUser(scanner);
+            case 2 -> registerUser(scanner);
+           
             default -> System.out.println("Invalid choice.");
         }
     }
@@ -46,7 +47,10 @@ public class UserClient {
 
     private void loginUser(Scanner scanner) {
         System.out.println("Enter your login details:");
-        System.out.print("Email ID: ");
+        System.out.print("Enter the UserName: ");
+        String name = scanner.next();
+        
+        System.out.print("Enter your Email ID: ");
         String email = scanner.next();
         System.out.print("Password: ");
         String password = scanner.next();
