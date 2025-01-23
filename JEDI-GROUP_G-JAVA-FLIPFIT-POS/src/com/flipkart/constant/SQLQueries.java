@@ -17,5 +17,9 @@ public class SQLQueries {
 	// PaymentDao viewPaymentDetails
 	public static final String FETCH_PAYMENT_DETAILS = "SELECT * FROM Payment WHERE PaymentId = ?";
 	
+	public static final String INSERT_GYM = "INSERT INTO GymCentre (Name, Location) values (?,?)";
+	
+	public static final String INSERT_SLOT = "INSERT INTO Slot (SlotDateTime, SlotSeats, SlotSeatsLeft) values (?,?,?)";
+	
 //	public static final String VALIDATE_USER = "SELECT * FROM Payment WHERE PaymentId = ?";
 }
