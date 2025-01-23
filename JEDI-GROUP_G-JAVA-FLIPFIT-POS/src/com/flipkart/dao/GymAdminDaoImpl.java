@@ -1,44 +1,54 @@
 package com.flipkart.dao;
 
-import java.util.List;
+import java.sql.*;
+import java.util.*;
+import com.flipkart.constant.SQLQueries;
 
 import com.flipkart.bean.Customer;
 import com.flipkart.bean.GymCentre;
 import com.flipkart.bean.GymOwner;
 
+
 public class GymAdminDaoImpl implements GymAdminDao {
-	// Method to verify a gym owner
     public boolean verifyGymOwner(GymOwner gymOwner) {
-        // Logic to verify gym owner
         System.out.println("Verifying gym owner: " + gymOwner.getName());
         return true; // Placeholder
     }
 
-    // Method to verify a gym
     public boolean verifyGym(GymCentre gymCentre) {
-        // Logic to verify gym
         System.out.println("Verifying gym: " + gymCentre.getName());
         return true; // Placeholder
     }
 
-    // Method to retrieve pending verifications
     public List<GymCentre> getPendingGymVerifications() {
-        // Logic to fetch pending verifications
+        List<GymCentre> pendingReq = new ArrayList<>();
+        // implement MySql connection
         System.out.println("Pending gym verifications :  " );
+        try{
+            statement = connection.prepareStatement(SQLQueries.FETCH_PENDING_GYM_CENTERS);
+            ResultSet rs = statement.executeQuery();
 
+            while(rs.next()){
+                GymCentre gymCenter = new GymCenter();
+                gymCenter.setId(rs.getInt("id"));
+                gymCenter.setName(rs.getString("name"));
+                gymCenter.setGymOwnerEmail(rs.getString("gymOwnerEmail"));
+                gymCenter.setLocation(rs.getString("location"));
+                gymCenter.setNoOfSeats(rs.getInt("noOfSeats"));
+                gymCenter.setApproved(false);
+                pendingReq.add(gymCenter);
+            }
+        }
         return null; // Placeholder
     }
-    
+
     public List<GymOwner> getPendingGymOwnerVerifications() {
-        // Logic to fetch pending verifications
         System.out.println("Pending gym owner verifications :  ");
 
         return null; // Placeholder
     }
-    
-    // Method to retrieve all customers
+
     public List<Customer> getAllCustomers() {
-        // Logic to fetch all customers
         return null; // Placeholder
     }
 }

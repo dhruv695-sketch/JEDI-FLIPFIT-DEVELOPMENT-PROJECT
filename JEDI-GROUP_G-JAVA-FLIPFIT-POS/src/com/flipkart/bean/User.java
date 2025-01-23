@@ -4,52 +4,73 @@ package com.flipkart.bean;
  * 
  */
 public class User {
-	private String userId;
-    private String name;
-    private String emailId;
-    private String password;
+	private int userId;
+	private String userName;
+    private String userEmail;
+    private String userRoleId;
+    private String userPassword;
     
-    public User(String name) {
-    	this.name = name;
-    }
-    public User(String name,  String emailId, String password) {
-    	this.name = name;
-    	this.emailId = emailId;
-    	this.password = password;
-    }
+    /**
+	 * @return the userId
+	 */
+	public int getUserId() {
+		return userId;
+	}
+	/**
+	 * @param userId the userId to set
+	 */
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+	/**
+	 * @return the userName
+	 */
+	public String getUserName() {
+		return userName;
+	}
+	/**
+	 * @param userName the userName to set
+	 */
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	/**
+	 * @return the userEmail
+	 */
+	public String getUserEmail() {
+		return userEmail;
+	}
+	/**
+	 * @param userEmail the userEmail to set
+	 */
+	public void setUserEmail(String userEmail) {
+		this.userEmail = userEmail;
+	}
+	/**
+	 * @return the userRoleId
+	 */
+	public String getUserRoleId() {
+		return userRoleId;
+	}
+	/**
+	 * @param userRoleId the userRoleId to set
+	 */
+	public void setUserRoleId(String userRoleId) {
+		this.userRoleId = userRoleId;
+	}
+	/**
+	 * @return the userPassword
+	 */
+	public String getUserPassword() {
+		return userPassword;
+	}
+	/**
+	 * @param userPassword the userPassword to set
+	 */
+	public void setUserPassword(String userPassword) {
+		this.userPassword = userPassword;
+	}
 
-    // Getters and Setters
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmailId() {
-        return emailId;
-    }
-
-    public void setEmailId(String emailId) {
-        this.emailId = emailId;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
     
     
 }

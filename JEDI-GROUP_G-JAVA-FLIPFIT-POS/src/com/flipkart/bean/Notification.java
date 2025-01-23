@@ -1,56 +1,68 @@
 package com.flipkart.bean;
 
-import java.util.List;
-import java.time.LocalDateTime;
+//import java.util.List;
+//import java.util.Date;
+import java.text.DateFormat;
 
 /**
  * 
  */
 public class Notification {
-    private int notificationId;
-    private String type;
-    private LocalDateTime timestamp;
-    private String content;
-    private List<String> userIdList;
-
-    // Getters and Setters
-    public int getNotificationId() {
-        return notificationId;
-    }
-
-    public void setNotificationId(int notificationId) {
-        this.notificationId = notificationId;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public LocalDateTime getTimestamp() {
-        return timestamp;
-    }
-
-    public void setTimestamp(LocalDateTime timestamp) {
-        this.timestamp = timestamp;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
-
-    public List<String> getUserIdList() {
-        return userIdList;
-    }
-
-    public void setUserIdList(List<String> userIdList) {
-        this.userIdList = userIdList;
-    }
+	
+	private int notificationId;
+	private String type;
+    private DateFormat notificationDateTime;
+    private String message;
+//    private List<String> userIdList;
+    
+    /**
+	 * @return the notificationId
+	 */
+	public int getNotificationId() {
+		return notificationId;
+	}
+	/**
+	 * @param notificationId the notificationId to set
+	 */
+	public void setNotificationId(int notificationId) {
+		this.notificationId = notificationId;
+	}
+	/**
+	 * @return the type
+	 */
+	public String getType() {
+		return type;
+	}
+	/**
+	 * @param type the type to set
+	 */
+	public void setType(String type) {
+		this.type = type;
+	}
+	/**
+	 * @return the notificationDateTime
+	 */
+	public DateFormat getNotificationDateTime() {
+		return notificationDateTime;
+	}
+	/**
+	 * @param notificationDateTime the notificationDateTime to set
+	 */
+	public void setNotificationDateTime(DateFormat notificationDateTime) {
+		this.notificationDateTime = notificationDateTime;
+	}
+	/**
+	 * @return the message
+	 */
+	public String getMessage() {
+		return message;
+	}
+	/**
+	 * @param message the message to set
+	 */
+	public void setMessage(String message) {
+		this.message = message;
+	}
+	
+   
 }

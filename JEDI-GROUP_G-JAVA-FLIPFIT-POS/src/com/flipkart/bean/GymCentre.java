@@ -6,7 +6,7 @@ import java.util.List;
  * 
  */
 public class GymCentre {
-	 private int gymId;
+	 	private int gymId;
 	    private String name;
 	    private String location;
 	    private List<Slot> slotList;

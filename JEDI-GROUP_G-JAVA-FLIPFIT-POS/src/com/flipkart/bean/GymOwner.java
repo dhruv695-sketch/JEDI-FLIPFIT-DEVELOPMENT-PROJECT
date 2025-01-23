@@ -1,29 +1,22 @@
 package com.flipkart.bean;
-
-import java.util.List;
-
 /**
  * 
  */
 public class GymOwner extends User{
 	
-	public GymOwner(String name) {
-		super(name);
+	/**
+	 * @return the gymOwnerId
+	 */
+	public int getGymOwnerId() {
+		return getUserId();
 	}
+
+	/**
+	 * @param gymOwnerId the gymOwnerId to set
+	 */
+	public void setGymOwnerId(int gymOwnerId) {
+		setUserId(gymOwnerId);
+	}
+
 	
-	public GymOwner(String name, String emailId, String password) {
-		super(name, emailId, password);
-		// TODO Auto-generated constructor stub
-	}
-
-	private List<GymCentre> gymList;
-
-    // Getters and Setters
-    public List<GymCentre> getGymList() {
-        return gymList;
-    }
-
-    public void setGymList(List<GymCentre> gymList) {
-        this.gymList = gymList;
-    }
 }
