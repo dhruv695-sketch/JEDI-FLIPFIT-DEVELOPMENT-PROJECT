@@ -2,13 +2,13 @@ package com.flipkart.business;
 
 import com.flipkart.bean.GymCentre;
 import com.flipkart.bean.Slot;
-import com.flipkart.dao.GymOwnerDao;
+import com.flipkart.dao.GymOwnerDaoImpl;
 
 import java.util.List;
 
 public class GymOwnerService {
 	
-	GymOwnerDao gymOwnerDao = new GymOwnerDao();
+	GymOwnerDaoImpl gymOwnerDao = new GymOwnerDaoImpl();
 	
     public boolean addGym(GymCentre gymCentre) {
     	return gymOwnerDao.addGym(gymCentre);

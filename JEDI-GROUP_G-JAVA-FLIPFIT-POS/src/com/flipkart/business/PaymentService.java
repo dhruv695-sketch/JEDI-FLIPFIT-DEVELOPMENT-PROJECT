@@ -1,10 +1,10 @@
 package com.flipkart.business;
 
 import com.flipkart.bean.Payment;
-import com.flipkart.dao.PaymentDao;
+import com.flipkart.dao.PaymentDaoImpl;
 
 public class PaymentService {
-    PaymentDao paymentDao = new PaymentDao();
+    PaymentDaoImpl paymentDao = new PaymentDaoImpl();
 
     public boolean makePayment(Payment payment) {
         return paymentDao.makePayment(payment);
