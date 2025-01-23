@@ -1,20 +1,19 @@
 package com.flipkart.bean;
 
 public class Role {
-	private int id;
+	private int roleId;
 	private String roleName;
-	
 	/**
-	 * @return the id
+	 * @return the roleId
 	 */
-	public int getId() {
-		return id;
+	public int getRoleId() {
+		return roleId;
 	}
 	/**
-	 * @param id the id to set
+	 * @param roleId the roleId to set
 	 */
-	public void setId(int id) {
-		this.id = id;
+	public void setRoleId(int roleId) {
+		this.roleId = roleId;
 	}
 	/**
 	 * @return the roleName
@@ -28,5 +27,7 @@ public class Role {
 	public void setRoleName(String roleName) {
 		this.roleName = roleName;
 	}
+	
+	
 	
 }

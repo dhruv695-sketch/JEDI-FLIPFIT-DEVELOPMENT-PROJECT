@@ -1,14 +1,14 @@
 package com.flipkart.business;
 
 import com.flipkart.bean.GymOwner;
-import com.flipkart.dao.GymAdminDao;
+import com.flipkart.dao.GymAdminDaoImpl;
 import com.flipkart.bean.Customer;
 import com.flipkart.bean.GymCentre;
 import java.util.List;
 
 public class GymAdminService {
 	
-	GymAdminDao gymAdminDao = new GymAdminDao();
+	GymAdminDaoImpl gymAdminDao = new GymAdminDaoImpl();
 	
     // Method to verify a gym owner
     public boolean verifyGymOwner(GymOwner gymOwner) {

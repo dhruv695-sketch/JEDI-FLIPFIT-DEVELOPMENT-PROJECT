@@ -20,23 +20,32 @@ public class GymCustomerClient {
         boolean isRunning = true;
         while (isRunning) {
             System.out.println("\nCustomer Menu:");
-            System.out.println("1. View Bookings");
-            System.out.println("2. Book Slot");
-            System.out.println("3. Logout");
+            System.out.println("1. View All Gyms");
+            System.out.println("2. View Bookings");
+//            System.out.println("3. Book Slot");
+            System.out.println("3. Edit Booking");
+            System.out.println("4. Logout");
             System.out.print("Enter your choice: ");
             int choice = scanner.nextInt();
             scanner.nextLine(); // Consume newline
 
             switch (choice) {
-                case 1:
+            	case 1:
+            		System.out.println("Displaying all gyms...");
+            		break;
+                case 2:
                     System.out.println("Viewing bookings...");
                     // Logic for viewing bookings
                     break;
-                case 2:
-                    System.out.println("Booking a slot...");
+//                case 3:
+//                    System.out.println("Booking a slot...");
+//                    // Logic for booking a slot
+//                    break;
+                case 3:
+                    System.out.println("Booking edited...");
                     // Logic for booking a slot
                     break;
-                case 3:
+                case 4:
                     System.out.println("Logging out...");
                     isRunning = false;
                     break;

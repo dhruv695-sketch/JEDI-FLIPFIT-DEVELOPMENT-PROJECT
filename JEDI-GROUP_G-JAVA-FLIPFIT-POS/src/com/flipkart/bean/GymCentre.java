@@ -6,10 +6,11 @@ import java.util.List;
  * 
  */
 public class GymCentre {
-	 private int gymId;
+	 	private int gymId;
 	    private String name;
 	    private String location;
 	    private List<Slot> slotList;
+	    private boolean isApproved;
 	    
 	    public GymCentre(String name) {
 	    	this.name = name;
@@ -47,4 +48,12 @@ public class GymCentre {
 	    public void setSlotList(List<Slot> slotList) {
 	        this.slotList = slotList;
 	    }
+		
+		public boolean getisApproved() {
+			return isApproved;
+		}
+
+		public void setisApproved(boolean isApproved) {
+			this.isApproved = isApproved;
+		}
 }

@@ -7,11 +7,6 @@ import java.util.List;
  */
 public class GymAdmin extends User {
 	
-    public GymAdmin(String name, String emailId, String password) {
-		super(name, emailId, password);
-		// TODO Auto-generated constructor stub
-	}
-
 	private List<GymOwner> pendingGymOwnerVerification;
     private List<GymCentre> pendingGymVerification;
 

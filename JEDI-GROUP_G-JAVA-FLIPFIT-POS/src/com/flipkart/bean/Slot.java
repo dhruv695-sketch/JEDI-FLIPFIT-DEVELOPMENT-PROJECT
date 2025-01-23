@@ -1,64 +1,73 @@
 package com.flipkart.bean;
 
-import java.util.List;
+//import java.util.List;
+//import java.util.Date;
+import java.text.DateFormat;
+//import java.text.SimpleDateFormat;
 
 /**
  * 
  */
-public class Slot {
+
+public class Slot{
     private int slotId;
-    private String startTime;
-    private String endTime;
-    private int seats;
-    private int remainingSeats;
-    private List<String> waitlistUsers;
+    private DateFormat slotDateTime;
+    private int slotSeats;
+    private int slotSeatsLeft;
+//    private List<String> waitlistUsers;
+    /**
+	 * @return the slotId
+	 */
+	public int getSlotId() {
+		return slotId;
+	}
+	/**
+	 * @param slotId the slotId to set
+	 */
+	public void setSlotId(int slotId) {
+		this.slotId = slotId;
+	}
+	/**
+	 * @return the slotDateTime
+	 */
+	public DateFormat getSlotDateTime() {
+		return slotDateTime;
+	}
+	/**
+	 * @param slotDateTime the slotDateTime to set
+	 */
+	public void setSlotDateTime(DateFormat slotDateTime) {
+		this.slotDateTime = slotDateTime;
+	}
+	/**
+	 * @return the slotSeats
+	 */
+	public int getSlotSeats() {
+		return slotSeats;
+	}
+	/**
+	 * @param slotSeats the slotSeats to set
+	 */
+	public void setSlotSeats(int slotSeats) {
+		this.slotSeats = slotSeats;
+	}
+	/**
+	 * @return the slotSeatsLeft
+	 */
+	public int getSlotSeatsLeft() {
+		return slotSeatsLeft;
+	}
+	/**
+	 * @param slotSeatsLeft the slotSeatsLeft to set
+	 */
+	public void setSlotSeatsLeft(int slotSeatsLeft) {
+		this.slotSeatsLeft = slotSeatsLeft;
+	}
+//    private String getDateTime()
+//    {
+//    	DateFormat dateFormat = new SimpleDateFormat("YYYY-MM-DD HH:MI:SS");
+//    	Date date = new Date();
+//    }
+    
 
-    // Getters and Setters
-    public int getSlotId() {
-        return slotId;
-    }
-
-    public void setSlotId(int slotId) {
-        this.slotId = slotId;
-    }
-
-    public String getStartTime() {
-        return startTime;
-    }
-
-    public void setStartTime(String startTime) {
-        this.startTime = startTime;
-    }
-
-    public String getEndTime() {
-        return endTime;
-    }
-
-    public void setEndTime(String endTime) {
-        this.endTime = endTime;
-    }
-
-    public int getSeats() {
-        return seats;
-    }
-
-    public void setSeats(int seats) {
-        this.seats = seats;
-    }
-
-    public int getRemainingSeats() {
-        return remainingSeats;
-    }
-
-    public void setRemainingSeats(int remainingSeats) {
-        this.remainingSeats = remainingSeats;
-    }
-
-    public List<String> getWaitlistUsers() {
-        return waitlistUsers;
-    }
-
-    public void setWaitlistUsers(List<String> waitlistUsers) {
-        this.waitlistUsers = waitlistUsers;
-    }
 }
