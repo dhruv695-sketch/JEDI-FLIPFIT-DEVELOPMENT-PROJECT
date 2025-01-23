@@ -89,8 +89,8 @@ INSERT INTO `FlipFit_Schema`.`Booking` (`BookingId`, `CustomerId`, `SlotId`, `Bo
 (1000, 1, 100, 'Confirmed'),
 (1001, 2, 100, 'Confirmed'),
 (1002, 3, 100, 'Confirmed'),
-(1001, 4, 101, 'Confirmed'),
-(1002, 5, 101, 'Confirmed');
+(1003, 4, 101, 'Confirmed'),
+(1004, 5, 101, 'Confirmed');
 
 
 
