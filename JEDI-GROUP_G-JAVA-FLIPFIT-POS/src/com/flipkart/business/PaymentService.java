@@ -1,25 +1,21 @@
 package com.flipkart.business;
 
 import com.flipkart.bean.Payment;
+import com.flipkart.dao.PaymentDao;
 
 public class PaymentService {
-    // Method to process a payment
+    PaymentDao paymentDao = new PaymentDao();
+
     public boolean makePayment(Payment payment) {
-        // Logic to process payment
-        System.out.println("Processing payment of amount: " + payment.getAmount());
-        return true; // Placeholder
+        return paymentDao.makePayment(payment);
     }
 
-    // Method to issue a refund
     public boolean issueRefund(int paymentId) {
-        // Logic to issue refund
-        System.out.println("Refund issued for payment ID: " + paymentId);
-        return true; // Placeholder
+        return paymentDao.issueRefund(paymentId);
     }
     
     public boolean viewPaymentDetails(int paymentId) {
-        // Logic to issue refund
-        System.out.println("Refund issued for payment ID: " + paymentId);
-        return true; // Placeholder
+        return paymentDao.viewPaymentDetails(paymentId);
     }
+    
 }
