@@ -2,6 +2,8 @@ package com.flipkart.client;
 
 import java.util.Scanner;
 
+import com.flipkart.business.GymOwnerService;
+
 public class GymOwnerClient {
 
     public static void registerGymOwner(Scanner scanner) {
@@ -29,10 +31,13 @@ public class GymOwnerClient {
 
             switch (choice) {
                 case 1:
+//                	GymOwnerService gymservice = new GymOwnerService();
+//                	gymservice.getGymsForOwner(choice)
                     System.out.println("Viewing gyms...");
                     // Logic for viewing gyms
                     break;
                 case 2:
+                	
                     System.out.println("Adding a gym...");
                     // Logic for adding a gym
                     break;

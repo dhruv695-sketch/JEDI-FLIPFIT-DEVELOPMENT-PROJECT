@@ -2,7 +2,7 @@ package com.flipkart.client;
 
 import java.util.Scanner;
 
-public class MainClient {
+public class FlipFitApplicationClient {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
