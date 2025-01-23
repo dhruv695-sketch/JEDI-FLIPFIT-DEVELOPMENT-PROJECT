@@ -49,13 +49,13 @@ public class User {
 	/**
 	 * @return the userRoleId
 	 */
-	public String getUserRoleId() {
+	public int getUserRoleId() {
 		return userRoleId;
 	}
 	/**
 	 * @param userRoleId the userRoleId to set
 	 */
-	public void setUserRoleId(String userRoleId) {
+	public void setUserRoleId(int userRoleId) {
 		this.userRoleId = userRoleId;
 	}
 	/**
