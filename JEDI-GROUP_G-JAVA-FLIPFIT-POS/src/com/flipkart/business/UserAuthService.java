@@ -1,11 +1,11 @@
 package com.flipkart.business;
 
 import com.flipkart.bean.User;
-import com.flipkart.dao.UserAuthDao;
+import com.flipkart.dao.UserAuthDaoImpl;
 
 public class UserAuthService {
 	
-	UserAuthDao userAuthDao = new UserAuthDao();
+	UserAuthDaoImpl userAuthDao = new UserAuthDaoImpl();
 	
     // Method to register a new user
     public boolean registerUser(User user) {

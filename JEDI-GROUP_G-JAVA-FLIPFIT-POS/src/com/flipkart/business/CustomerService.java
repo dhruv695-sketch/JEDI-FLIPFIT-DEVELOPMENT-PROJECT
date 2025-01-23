@@ -3,12 +3,12 @@ package com.flipkart.business;
 import com.flipkart.bean.BookSlot;
 import com.flipkart.bean.GymCentre;
 import com.flipkart.bean.Slot;
-import com.flipkart.dao.CustomerDao;
+import com.flipkart.dao.CustomerDaoImpl;
 
 import java.util.List;
 
 public class CustomerService {
-	CustomerDao customerDao = new CustomerDao();
+	CustomerDaoImpl customerDao = new CustomerDaoImpl();
 	
     // Method to create a new booking
     public boolean createBooking(BookSlot bookSlot) {
