@@ -122,37 +122,5 @@ public class GymOwnerDaoImpl implements GymOwnerDao {
 		// Placeholder
 	}
 	
-	public boolean isApproved(String gymOwnerEmail) {
-		
-		try {
-			connection = DBUtils.getConnection();
-			statement = connection.prepareStatement(SQLQueries.VERIFY_GYM_OWNER_APPROVAL);
-			statement.setString(1, gymOwnerEmail);
-		    ResultSet output = statement.executeQuery();
-		    if(output.next())
-		    	return true;
-		} catch(SQLException sqlExcep) {
-		       System.out.println(sqlExcep);
-		} catch(Exception excep) {
-		       excep.printStackTrace();
-		}
-		return false;
-	}
-
-	public boolean isApproved(int gymCenterId) {
-
-		try {
-			connection = DBUtils.getConnection();
-			statement = connection.prepareStatement(SQLQueries.VERIFY_GYM_APPROVAL);
-			statement.setInt(1, gymCenterId);
-			ResultSet output = statement.executeQuery();
-			if(output.next())
-				return true;
-		} catch(SQLException sqlExcep) {
-			System.out.println(sqlExcep);
-		} catch(Exception excep) {
-			excep.printStackTrace();
-		}
-		return false;
-	}
+	
 }
