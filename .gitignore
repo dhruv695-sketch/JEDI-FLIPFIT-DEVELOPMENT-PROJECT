@@ -11,6 +11,21 @@
 /target/
 /.classpath
 
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
 /JEDI-GROUP_G-JAVA-FLIPFIT-POS/my-sql-connector
 #JEDI-GROUP_G-JAVA-FLIPFIT-POS/.classpath
 JEDI-GROUP_G-JAVA-FLIPFIT-POS/.classpath
