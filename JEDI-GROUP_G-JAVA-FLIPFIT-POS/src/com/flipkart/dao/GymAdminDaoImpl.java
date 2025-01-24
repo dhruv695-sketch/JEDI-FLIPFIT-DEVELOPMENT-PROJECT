@@ -30,20 +30,35 @@ public class GymAdminDaoImpl implements GymAdminDao {
 
             while(rs.next()){
                 GymCentre gymCenter = new GymCenter();
-                gymCenter.setId(rs.getInt("id"));
-                gymCenter.setName(rs.getString("name"));
-                gymCenter.setGymOwnerEmail(rs.getString("gymOwnerEmail"));
-                gymCenter.setLocation(rs.getString("location"));
-                gymCenter.setNoOfSeats(rs.getInt("noOfSeats"));
-                gymCenter.setApproved(false);
+                gymCenter.setGymId(rs.getInt("GymId"));
+                gymCenter.setName(rs.getString("GymName"));
+                gymCenter.setLocation(rs.getString("GymLocation"));
                 pendingReq.add(gymCenter);
             }
+        }
+        catch() {
+        	
         }
         return null; // Placeholder
     }
 
     public List<GymOwner> getPendingGymOwnerVerifications() {
         System.out.println("Pending gym owner verifications :  ");
+        List<GymOwner> pendingReq = new ArrayList<>();
+        // implement MySql connection
+        try{
+            statement = connection.prepareStatement(SQLQueries.FETCH_PENDING_GYM_CENTERS);
+            ResultSet rs = statement.executeQuery();
+
+            while(rs.next()){
+                GymOwner gymOwner = new GymOwner();
+                gymOwner.setGymOwnerId(rs.getInt("GymOwnerId"));
+                pendingReq.add(gymOwner);
+            }
+        }
+        catch() {
+        	
+        }
 
         return null; // Placeholder
     }

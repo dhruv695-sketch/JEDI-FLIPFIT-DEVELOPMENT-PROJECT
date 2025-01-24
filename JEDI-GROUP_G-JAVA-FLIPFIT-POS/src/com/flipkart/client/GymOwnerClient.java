@@ -2,7 +2,9 @@ package com.flipkart.client;
 
 import java.util.Scanner;
 
+import com.flipkart.bean.User;
 import com.flipkart.business.GymOwnerService;
+import com.flipkart.business.UserAuthService;
 
 public class GymOwnerClient {
 
@@ -14,6 +16,13 @@ public class GymOwnerClient {
         String email = scanner.nextLine();
         System.out.print("Enter your Password: ");
         String password = scanner.nextLine();
+        User user = new User();
+        user.setUserEmail(email);
+        user.setUserPassword(password);
+        user.setUserName(name);
+        user.setUserRoleId(2);
+        UserAuthService userBus = new UserAuthService();
+        userBus.registerUser(user,1);
         System.out.println("Gym Owner registered successfully!");
         // Logic for storing owner data can be added here
     }

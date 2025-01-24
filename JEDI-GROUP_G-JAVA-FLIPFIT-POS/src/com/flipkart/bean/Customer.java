@@ -7,8 +7,8 @@ package com.flipkart.bean;
  */
 public class Customer extends User{
 	private int customerAge;
-    private int customerGender;
-    private int customerAddress;
+    private String customerGender;
+    private String customerAddress;
     
     
     public int getCustomerId() {
@@ -23,16 +23,16 @@ public class Customer extends User{
 	public void setCustomerAge(int customerAge) {
 		this.customerAge = customerAge;
 	}
-	public int getCustomerGender() {
+	public String getCustomerGender() {
 		return customerGender;
 	}
-	public void setCustomerGender(int customerGender) {
+	public void setCustomerGender(String customerGender) {
 		this.customerGender = customerGender;
 	}
-	public int getCustomerAddress() {
+	public String getCustomerAddress() {
 		return customerAddress;
 	}
-	public void setCustomerAddress(int customerAddress) {
+	public void setCustomerAddress(String customerAddress) {
 		this.customerAddress = customerAddress;
 	}
 

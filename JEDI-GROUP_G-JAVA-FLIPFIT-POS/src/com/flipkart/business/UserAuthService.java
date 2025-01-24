@@ -8,8 +8,8 @@ public class UserAuthService {
 	UserAuthDaoImpl userAuthDao = new UserAuthDaoImpl();
 	
     // Method to register a new user
-    public boolean registerUser(User user) {
-        return userAuthDao.registerUser(user);
+    public boolean registerUser(User user, int num) {
+        return userAuthDao.registerUser(user, num);
     }
 
     // Method to validate user login

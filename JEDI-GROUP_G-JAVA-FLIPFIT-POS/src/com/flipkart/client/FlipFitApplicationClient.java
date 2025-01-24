@@ -2,11 +2,15 @@ package com.flipkart.client;
 
 import java.util.Scanner;
 
+import com.flipkart.bean.User;
+import com.flipkart.business.*;
+
 public class FlipFitApplicationClient {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         boolean isRunning = true;
+        int num =2;
 
         while (isRunning) {
             System.out.println("Welcome to FlipFit Application:");
@@ -19,13 +23,15 @@ public class FlipFitApplicationClient {
             System.out.print("Enter your choice: ");
             int choice = scanner.nextInt();
             scanner.nextLine(); // Consume newline
+            
 
             switch (choice) {
                 case 1:
                     login(scanner);
                     break;
                 case 2:
-                    GymCustomerClient.registerGymCustomer(scanner);
+                	num++;
+                    GymCustomerClient.registerGymCustomer(scanner,num);
                     break;
                 case 3:
                     GymOwnerClient.registerGymOwner(scanner);
@@ -49,10 +55,31 @@ public class FlipFitApplicationClient {
         System.out.println("\nLogin:");
         System.out.print("Enter the UserName: ");
         String username = scanner.nextLine();
+        System.out.print("Enter the Email: ");
+        String email = scanner.nextLine();
         System.out.print("Enter the Password: ");
         String password = scanner.nextLine();
         System.out.print("Enter the Role (GymAdmin/Owner/Customer): ");
         String role = scanner.nextLine();
+        User user = new User();
+        user.setUserEmail(email);
+        user.setUserPassword(password);
+        user.setUserName(username);
+        if(role.equals("Customer")){
+			user.setUserRoleId(3);
+		}
+		else if(role.equals("GymOwner")){
+			user.setUserRoleId(2);
+		}
+		else if(role.equals("Admin")){
+			user.setUserRoleId(1);
+		}
+        
+        UserAuthService userBus = new UserAuthService();
+        userBus.validateLogin(email, password);
+      
+        
+        
 
         switch (role.toLowerCase()) {
             case "customer":
