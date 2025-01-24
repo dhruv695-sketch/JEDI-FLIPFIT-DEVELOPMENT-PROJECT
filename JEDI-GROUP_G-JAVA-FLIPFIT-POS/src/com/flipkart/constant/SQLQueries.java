@@ -28,9 +28,7 @@ public class SQLQueries {
 	
 	public static final String FETCH_PENDING_GYMS = "SELECT * FROM GymCentre where isApproved = false";
 	
-	public static final String VERIFY_GYM_OWNER_APPROVAL = "SELECT * FROM GymOwner where UserId=? and isApproved = true";
 
-	public static final String VERIFY_GYM_APPROVAL = "SELECT * FROM GymCentre where GymId=? and isApproved = true";
 
 	
 //	public static final String VALIDATE_USER = "SELECT * FROM Payment WHERE PaymentId = ?";
